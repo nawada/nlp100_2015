@@ -7,14 +7,14 @@ class Q04 {
         val string = "Hi He Lied Because Boron Could Not Oxidize Fluorine. New Nations Might Also Sign Peace Security Clause. Arthur King Can."
         val onlyFirst = arrayOf(0, 4, 5, 6, 7, 8, 14, 15, 18)
         val elements = HashMap<Int, String>()
-        val strings = string.splitBy(" ")
+        val strings = string.split(" ")
         var index = 0
         var onlyFirstIndex = 0;
 
         for (str in strings) {
-            var element = str.get(0, 2)
-            if (onlyFirst.size() > onlyFirstIndex && onlyFirst[onlyFirstIndex] == index) {
-                element = element.get(0).toString()
+            var element = str.substring(0, 2)
+            if (onlyFirst.size > onlyFirstIndex && onlyFirst[onlyFirstIndex] == index) {
+                element = element[0].toString()
                 onlyFirstIndex++;
             }
             elements.put(index++, element.toString())
